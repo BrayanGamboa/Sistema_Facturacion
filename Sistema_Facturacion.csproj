@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B557617-3A85-4CC0-B114-1CB9BA31AE1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sistema_Facturacion</RootNamespace>
+    <AssemblyName>Sistema_Facturacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=7.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>packages\Npgsql.7.0.4\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.7.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Channels.7.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ConnectionDB.cs" />
+    <Compile Include="Class\Objetos\Obj_Categoria_Producto.cs" />
+    <Compile Include="Class\Objetos\Obj_Cliente.cs" />
+    <Compile Include="Class\Objetos\Detalle_Factura.cs" />
+    <Compile Include="Class\Objetos\Empleado.cs" />
+    <Compile Include="Class\Objetos\Estado_Factura.cs" />
+    <Compile Include="Class\Objetos\Obj_Factura.cs" />
+    <Compile Include="Class\Objetos\Obj_Login.cs" />
+    <Compile Include="Class\Objetos\Obj_Producto.cs" />
+    <Compile Include="Class\Objetos\Obj_Rol.cs" />
+    <Compile Include="Class\Objetos\Seguridad.cs" />
+    <Compile Include="Forms\Facturacion\CRUD_Factura\Form_Factura_Nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\CRUD_Factura\Form_Factura_Nuevo.Designer.cs">
+      <DependentUpon>Form_Factura_Nuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturacion\Form_Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\Form_Informe.Designer.cs">
+      <DependentUpon>Form_Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturacion\Form_Lista_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\Form_Lista_Factura.Designer.cs">
+      <DependentUpon>Form_Lista_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Informacion\Form_Informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Informacion\Form_Informacion.Designer.cs">
+      <DependentUpon>Form_Informacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Informacion\Form_Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Informacion\Form_Ayuda.Designer.cs">
+      <DependentUpon>Form_Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\Form_Lista_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\Form_Lista_Empleados.Designer.cs">
+      <DependentUpon>Form_Lista_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Nuevo_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Nuevo_Empleados.Designer.cs">
+      <DependentUpon>Form_Nuevo_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Editar_Rol_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Editar_Rol_Empleado.Designer.cs">
+      <DependentUpon>Form_Editar_Rol_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\Form_Lista_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\Form_Lista_Roles.Designer.cs">
+      <DependentUpon>Form_Lista_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Seguridad\Form_Admin_Seguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Seguridad\Form_Admin_Seguridad.Designer.cs">
+      <DependentUpon>Form_Admin_Seguridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Editar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Editar_Empleado.Designer.cs">
+      <DependentUpon>Form_Editar_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Nuevo_Rol_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Nuevo_Rol_Empleados.Designer.cs">
+      <DependentUpon>Form_Nuevo_Rol_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Editar_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Editar_Clientes.Designer.cs">
+      <DependentUpon>Form_Editar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturacion\CRUD_Factura\Form_Facturas_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturacion\CRUD_Factura\Form_Facturas_Editar.Designer.cs">
+      <DependentUpon>Form_Facturas_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Nuevo_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Nuevo_Clientes.Designer.cs">
+      <DependentUpon>Form_Nuevo_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Editar_Categoria_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Editar_Categoria_Productos.Designer.cs">
+      <DependentUpon>Form_Editar_Categoria_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Nueva_Categoria_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Nueva_Categoria_Productos.Designer.cs">
+      <DependentUpon>Form_Nueva_Categoria_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\Form_Lista_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Categoria\Form_Lista_Categoria.Designer.cs">
+      <DependentUpon>Form_Lista_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\Form_Lista_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Clientes\Form_Lista_Clientes.Designer.cs">
+      <DependentUpon>Form_Lista_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Inicio.Designer.cs">
+      <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\CRUD_Productos\Form_Editar_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\CRUD_Productos\Form_Editar_Productos.Designer.cs">
+      <DependentUpon>Form_Editar_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\CRUD_Productos\Form_Nuevo_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\CRUD_Productos\Form_Nuevo_Productos.Designer.cs">
+      <DependentUpon>Form_Nuevo_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\Form_Lista_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tablas\Productos\Form_Lista_Productos.Designer.cs">
+      <DependentUpon>Form_Lista_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Facturacion\CRUD_Factura\Form_Facturas_Editar.resx">
+      <DependentUpon>Form_Facturas_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturacion\CRUD_Factura\Form_Factura_Nuevo.resx">
+      <DependentUpon>Form_Factura_Nuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturacion\Form_Informe.resx">
+      <DependentUpon>Form_Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturacion\Form_Lista_Factura.resx">
+      <DependentUpon>Form_Lista_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Informacion\Form_Ayuda.resx">
+      <DependentUpon>Form_Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Informacion\Form_Informacion.resx">
+      <DependentUpon>Form_Informacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Nuevo_Empleados.resx">
+      <DependentUpon>Form_Nuevo_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Empleados\Form_Lista_Empleados.resx">
+      <DependentUpon>Form_Lista_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Editar_Rol_Empleado.resx">
+      <DependentUpon>Form_Editar_Rol_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Roles\Form_Lista_Roles.resx">
+      <DependentUpon>Form_Lista_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Seguridad\Form_Admin_Seguridad.resx">
+      <DependentUpon>Form_Admin_Seguridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Empleados\CRUD_Empleados\Form_Editar_Empleado.resx">
+      <DependentUpon>Form_Editar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seguridad\Roles\CRUD_Roles\Form_Nuevo_Rol_Empleados.resx">
+      <DependentUpon>Form_Nuevo_Rol_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Nuevo_Clientes.resx">
+      <DependentUpon>Form_Nuevo_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Editar_Categoria_Productos.resx">
+      <DependentUpon>Form_Editar_Categoria_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Categoria\CRUD_Categoria\Form_Nueva_Categoria_Productos.resx">
+      <DependentUpon>Form_Nueva_Categoria_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Clientes\CRUD_Clientes\Form_Editar_Clientes.resx">
+      <DependentUpon>Form_Editar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Categoria\Form_Lista_Categoria.resx">
+      <DependentUpon>Form_Lista_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Clientes\Form_Lista_Clientes.resx">
+      <DependentUpon>Form_Lista_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Inicio.resx">
+      <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Productos\CRUD_Productos\Form_Editar_Productos.resx">
+      <DependentUpon>Form_Editar_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Productos\CRUD_Productos\Form_Nuevo_Productos.resx">
+      <DependentUpon>Form_Nuevo_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tablas\Productos\Form_Lista_Productos.resx">
+      <DependentUpon>Form_Lista_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2023-08-14 214010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-removebg-preview %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrasena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo-electronico_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\bolsa-de-la-compra.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\menu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\informes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\factura.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\empleados.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\roles.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\seguridad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\ayuda.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\informacion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\png\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\agregar-usuario.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\png\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\png\Img_Información.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\llave-inglesa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Seguridad\Seguridad\Crud_Seguridad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\documento_agregar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconos\boton-mas.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+</Project>
