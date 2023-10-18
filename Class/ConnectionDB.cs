@@ -18,11 +18,11 @@ namespace Sistema_Facturacion.Class
         public ConnectionDB() { }
         private static string getChainDB()
         {
-            string host_DB = "bcgignm2nyqyudv6zxh8-postgresql.services.clever-cloud.com";
-            string port_DB = "5432";
-            string name_DB = "bcgignm2nyqyudv6zxh8";
-            string user_DB = "ugicnxasmrlwbj3bhr2y";
-            string passwod_DB = "e7MjU37weRot42pcaQuqrUHWlrbQ4m";
+            string host_DB = "";
+            string port_DB = "";
+            string name_DB = "";
+            string user_DB = "";
+            string passwod_DB = "";
 
             string chainConnection = string.Format($"Host={host_DB};Port={port_DB};Database={name_DB};UserName={user_DB};Password={passwod_DB};");
 
